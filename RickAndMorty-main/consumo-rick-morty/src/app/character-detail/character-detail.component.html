@@ -1,0 +1,17 @@
+<div *ngIf="personaje">
+    <img [src]="personaje.image" alt="{{personaje.name}}" />
+    <h2>{{ personaje.name }}</h2>
+    <p>{{ personaje.gender }}</p>
+
+    <div>
+        <ul>
+            <li *ngFor="let capitulos of personaje.episode">
+                {{ capitulos }}
+            </li>
+        </ul>
+    </div>
+
+</div>
+<div *ngIf="!personaje">
+    <h2>Cargando..</h2>
+</div>
